@@ -1,6 +1,11 @@
-<p>About page</p>
-<button mat-button [matMenuTriggerFor]="menu">Menu</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
-</mat-menu>
+<p>This is a project implementing client-side PDF annotations for
+  Buildertrend Inc. This project is a part of the CSCI 4970 <br/>Capstone 
+  Project for Computer Science students at the University of Nebraska-Omaha.<br/>
+  This project was built by Andrew Shellberg, Colin Brammeier, Brody Himmelberg, and 
+  Chris Kiihne. 
+</p>
+  <div>
+    <button mat-raised-button color="primary" (click)="goToPage('')">Home</button>
+    <button mat-raised-button color="accent" style="margin-left:10px;" (click)="goToPage('about')">About</button>
+    <button mat-raised-button color="primary" style="margin-left:10px;" (click)="goToPage('editor')">Editor</button>
+  </div>

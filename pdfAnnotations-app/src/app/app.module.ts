@@ -8,13 +8,15 @@ import { EditorComponent } from './editor/editor.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
-import { MatButtonModule} from '@angular/material/button'
+import { MatButtonModule} from '@angular/material/button';
+import { HomeComponent } from './home/home.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    EditorComponent
+    EditorComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
