@@ -1,7 +1,14 @@
-<p>Welcome to our home page! This application is used for annotating PDFs fully client-side.</p>
+<p style="color: black; background-color:powderblue; text-align:center;font-weight:bold; font-size:30px;padding: 20px">Welcome to our PDF Editor!</p>
+
 <div>
-    <button mat-raised-button color="primary" (click)="goToPage('')">Home</button>
-    <button mat-raised-button color="accent" style="margin-left:10px;" (click)="goToPage('about')">About</button>
-    <button mat-raised-button color="primary" style="margin-left:10px;" (click)="goToPage('editor')">Editor</button>
+    <body align="center" style="padding-top: 80px;">
+      <button mat-raised-button color="primary" style="height:100px; width:300px;"(click)="goToPage('')">New PDF</button>
+    </body>
+    <body align="center" style="padding-top: 80px;">
+      <button mat-raised-button color="primary" style="height:100px; width:300px;" (click)="goToPage('editor')">Edit Existing PDF</button>
+    </body>
+    <body align="center" style="padding-top: 80px;">
+      <button mat-raised-button color="accent" style="height:100px; width:300px;" (click)="goToPage('about')">About</button>
+    </body>
   </div>
 
