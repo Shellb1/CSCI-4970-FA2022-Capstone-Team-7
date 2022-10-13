@@ -1,6 +1,32 @@
-<p>This is the editing page that will eventually be used to edit PDFs. </p>
-  <div>
-    <button mat-raised-button color="primary" (click)="goToPage('')">Home</button>
-    <button mat-raised-button color="accent" style="margin-left:10px;" (click)="goToPage('about')">About</button>
-    <button mat-raised-button color="primary" style="margin-left:10px;" (click)="goToPage('editor')">Editor</button>
-  </div>
+<p>This is the editing page that will eventually be used to edit PDFs.</p>
+
+<div>
+  <iframe
+    id="pdf-js-viewer"
+    src="../../web/viewer.html?file=%2FTestPDFfile.pdf"
+    title="webviewer"
+    frameborder="0"
+    width="500"
+    height="600"
+  ></iframe>
+</div>
+
+<div>
+  <button mat-raised-button color="primary" (click)="goToPage('')">Home</button>
+  <button
+    mat-raised-button
+    color="accent"
+    style="margin-left: 10px"
+    (click)="goToPage('about')"
+  >
+    About
+  </button>
+  <button
+    mat-raised-button
+    color="primary"
+    style="margin-left: 10px"
+    (click)="goToPage('editor')"
+  >
+    Editor
+  </button>
+</div>

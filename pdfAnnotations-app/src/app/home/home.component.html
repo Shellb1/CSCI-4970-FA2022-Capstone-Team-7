@@ -1,14 +1,45 @@
-<p style="color: black; background-color:powderblue; text-align:center;font-weight:bold; font-size:30px;padding: 20px">Welcome to our PDF Editor!</p>
+<p
+  style="
+    color: black;
+    background-color: powderblue;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 20px;
+  "
+>
+  Welcome to our PDF Editor!
+</p>
 
 <div>
-    <body align="center" style="padding-top: 80px;">
-      <button mat-raised-button color="primary" style="height:100px; width:300px;"(click)="goToPage('')">New PDF</button>
-    </body>
-    <body align="center" style="padding-top: 80px;">
-      <button mat-raised-button color="primary" style="height:100px; width:300px;" (click)="goToPage('editor')">Edit Existing PDF</button>
-    </body>
-    <body align="center" style="padding-top: 80px;">
-      <button mat-raised-button color="accent" style="height:100px; width:300px;" (click)="goToPage('about')">About</button>
-    </body>
-  </div>
-
+  <body align="center" style="padding-top: 80px">
+    <button
+      mat-raised-button
+      color="primary"
+      style="height: 100px; width: 300px"
+      (click)="goToPage('')"
+    >
+      New PDF
+    </button>
+  </body>
+  <body align="center" style="padding-top: 80px">
+    <button
+      mat-raised-button
+      color="primary"
+      style="height: 100px; width: 300px"
+      (click)="goToPage('editor')"
+    >
+      Edit Existing PDF
+    </button>
+  </body>
+  <body align="center" style="padding-top: 80px">
+    <button
+      mat-raised-button
+      color="accent"
+      style="height: 100px; width: 300px"
+      (click)="goToPage('about')"
+    >
+      About
+    </button>
+  </body>
+</div>
