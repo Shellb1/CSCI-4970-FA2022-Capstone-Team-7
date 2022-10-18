@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'editor', component: EditorComponent},
+  {path: '**', redirectTo: './editor/web/viewer.html', pathMatch: 'full'},
   {path: '', component: HomeComponent}
 ];
 
