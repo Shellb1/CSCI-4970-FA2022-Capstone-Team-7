@@ -1,6 +1,16 @@
-.center {
-    text-align: center
-}
 .bold {
     font-weight: bold;
+}
+body {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+button {
+    justify-content: center;
+    text-align: center;
+    height: 100px;
+    width: 300px;
+}
+body {
+    text-align: center;
 }
