@@ -5,7 +5,23 @@ provides construction management software. This application will take the form o
 Amazon EC2 instance. 
 
 RELEASE NOTES FOR MILESTONE 1:
+
     Deployment environment (EC2 server) set up. 
+
     Barebones Angular project created and deployed on the instance. 
+
     Routing between various pages has been set up. 
+
     All of the code for this release resides in the main branch. 
+
+RELEASE NOTES FOR MILESTONE 2:
+
+    PDF.js viewer built into application. The viewer has features such as searching, 
+    opening PDF's fully client-side, and more. Annotations are not present yet but will be
+    in a future release. 
+
+    Development started on other pages. 
+
+    Added a banner to the top of the application that is present across all pages. 
+
+    Other libraries beginning to be explored, but no active development as of now. 
