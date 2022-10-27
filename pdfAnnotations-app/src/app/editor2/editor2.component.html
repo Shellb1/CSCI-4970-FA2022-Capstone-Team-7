@@ -1,1 +1,16 @@
-<p>editor2 works!</p>
+<body>
+  <p>editor2 works!</p>
+  <div>
+    <button mat-raised-button color="primary" (click)="goToPage('')">
+      Home
+    </button>
+    <button
+      mat-raised-button
+      color="accent"
+      style="margin-left: 10px"
+      (click)="goToPage('about')"
+    >
+      About
+    </button>
+  </div>
+</body>
