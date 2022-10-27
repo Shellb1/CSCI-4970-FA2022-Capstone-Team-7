@@ -2,9 +2,11 @@
   "name": "pdf-annotations-app",
   "version": "0.0.0",
   "scripts": {
+    
+    "move-static": "cp -a ./node_modules/@pdftron/webviewer/public/. ./dist/public/webviewer",
+    "build": "mybuildscript && npm run move-static",
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -20,6 +22,7 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "@pdftron/webviewer": "^8.9.0",
     "karma-firefox-launcher": "^2.1.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
