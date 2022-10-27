@@ -1,34 +1,57 @@
 <body>
   <div>
-    <body>
-      <button
-        mat-raised-button
-        color="primary"
-        style="height: 100px; width: 300px"
-        (click)="goToPage('')"
-      >
-        New PDF
-      </button>
-    </body>
-    <body>
-      <button
-        mat-raised-button
-        color="primary"
-        style="height: 100px; width: 300px"
-        (click)="goToPage('editor')"
-      >
-        Edit Existing PDF
-      </button>
-    </body>
-    <body style=>
-      <button
-        mat-raised-button
-        color="accent"
-        style="height: 100px; width: 300px"
-        (click)="goToPage('about')"
-      >
-        About
-      </button>
-    </body>
+    <button
+      mat-raised-button
+      color="primary"
+      style="height: 100px; width: 300px"
+      (click)="goToPage('')"
+    >
+      New PDF
+    </button>
+    <br />
+    <button
+      mat-raised-button
+      color="accent"
+      style="height: 100px; width: 300px"
+      (click)="goToPage('editor')"
+    >
+      Edit Existing PDF with PDFJS
+    </button>
+    <br />
+    <button
+      mat-raised-button
+      color="primary"
+      style="height: 100px; width: 300px"
+      (click)="goToPage('editor2')"
+    >
+      Edit Existing PDF with library 2
+    </button>
+    <br />
+    <button
+      mat-raised-button
+      color="accent"
+      style="height: 100px; width: 300px"
+      (click)="goToPage('editor3')"
+    >
+      Edit Existing PDF with library 3
+    </button>
+    <br />
+    <button
+      mat-raised-button
+      color="primary"
+      style="height: 100px; width: 300px"
+      (click)="goToPage('editor4')"
+    >
+      Edit Existing PDF with library 4
+    </button>
+    <br />
+    <button
+      mat-raised-button
+      color="accent"
+      style="height: 100px; width: 300px"
+      (click)="goToPage('about')"
+    >
+      About
+    </button>
   </div>
 </body>
