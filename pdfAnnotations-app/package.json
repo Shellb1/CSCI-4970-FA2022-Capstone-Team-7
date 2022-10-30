@@ -2,10 +2,11 @@
   "name": "pdf-annotations-app",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
+    
     "move-static": "cp -a ./node_modules/@pdftron/webviewer/public/. ./dist/public/webviewer",
     "build": "mybuildscript && npm run move-static",
+    "ng": "ng",
+    "start": "ng serve",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
