@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './editor3.component.html',
-  styleUrls: ['./editor3.component.css']
+  styleUrls: ['./editor3.component.scss']
 })
 export class Editor3Component implements OnInit, AfterViewInit {
   @ViewChild('viewer')
@@ -23,8 +23,9 @@ export class Editor3Component implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
 
     WebViewer({
-      path: '../lib',
-      initialDoc: '../../files/webviewer-demo-annotated.pdf'
+      path: '../../assets/lib',
+      initialDoc: 'https://pdftron.s3.amazonaws.com/downloads/pl/demo-annotated.pdf',
+      enableFilePicker: true,
     }, this.viewer.nativeElement).then(instance => {
       this.wvInstance = instance;
 
