@@ -1,16 +1,55 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
 <body>
-  <p>editor4 works!</p>
-  <div>
-    <button mat-raised-button color="primary" (click)="goToPage('')">
-      Home
-    </button>
-    <button
-      mat-raised-button
-      color="accent"
-      style="margin-left: 10px"
-      (click)="goToPage('about')"
-    >
-      About
-    </button>
+  <div style="float:left;">
+      <iframe id="pdf" class="pdf" width="700"height="600"></iframe>
   </div>
-</body>
+  <div style="padding-left:750px; padding-right:20px;">
+    <h3 style="text-align:center; font-size: 30px;">PDF-Lib Library</h3>
+    <p style="font-size:15px;">
+      PDF.js is an open-source JavaScript library developed and supported by the Mozilla foundation. It is included standard in Mozilla Firefox, 
+      and there also is an extension for Google Chrome. Thus, the supported browsers 
+      for this particular application are Firefox and Chrome. 
+      <br/>
+      <br/>
+      Some of the features that this version of the viewer includes are opening and viewing PDFs fully client-side, 
+      annotating PDFs fully client-side, as well as loading annotations already present. In addition, there is a feature 
+      to add text to the PDF as well. There are also various search and view features. One could also add to the viewer and
+      have it render PDFs from URLs, however, CORS (cross-origin resource sharing) concerns should be taken into account.  
+      <br/>
+      <br/>
+      In this version of the viewer, we did not find any mechanism for supporting .XMP files, nor support for images and layers. 
+      That is something that could be possible to implement by extending the viewer, but unfortunately is beyond our capabilities 
+      as developers.
+      <br/>
+      <br/>
+      Ultimately, however, the library does a lot of the heavy working with parsing/rendering PDFs, so it is possible to 
+      add a lot of features by utilizing the library's APIs. That, in fact, is how the webviewer is built: it is not actually part
+      of the full library, but rather a demo meant to show what is possible via the library. Another benefit is it is written in 
+      pure JavaScript/HTML, and thus can be extended and utilized within any framework/development context. 
+      <br/>
+      <br/>
+      Finally, a key benefit of using PDF.js over other editors is it is free and open-source. However, using the viewer we have embedded in our application 
+      would require Buildertrend to build upon it or reskin it in some way in accordance with the licensing on the Github repo,
+      which is linked <a href="https://github.com/mozilla/pdf.js" target="_blank">here.</a>
+    </p>
+  </div>
+<div style="padding-left:740px; padding-top:48px;">
+  <button mat-raised-button color="accent" style="margin-left: 10px" (click)="goToPage('about')">
+    About
+  </button>
+  <button mat-raised-button color="primary" style="margin-left: 10px" (click)="goToPage('editor')">
+    Editor
+  </button>
+  <button mat-raised-button color="primary" style="margin-left: 10px" (click)="goToPage('editor')">
+    Add Title
+  </button>
+  <button mat-raised-button color="primary" style="margin-left: 10px" (click)="goToPage('editor')">
+    Add Watermark
+  </button>
+</div>
+
+  </body>
+</html>
