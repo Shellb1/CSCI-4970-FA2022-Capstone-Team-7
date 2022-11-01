@@ -1,0 +1,19 @@
+<body>
+  <div style="float:left;">
+    <iframe id="pdf-js-viewer" src="https://web-examples.pspdfkit.com/hello?mode=standalone" title="webviewer" frameborder="0" width="700"
+      height="600"></iframe>
+  </div>
+  <div>
+    <button mat-raised-button color="primary" (click)="goToPage('')">
+      Home
+    </button>
+    <button
+      mat-raised-button
+      color="accent"
+      style="margin-left: 10px"
+      (click)="goToPage('about')"
+    >
+      About
+    </button>
+  </div>
+</body>
