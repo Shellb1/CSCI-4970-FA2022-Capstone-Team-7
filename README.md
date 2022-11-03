@@ -25,3 +25,11 @@ RELEASE NOTES FOR MILESTONE 2:
     Added a banner to the top of the application that is present across all pages. 
 
     Other libraries beginning to be explored, but no active development as of now. 
+RELEASE NOTES FOR MILESTONE 3:
+    PDF.js viewer with annotation features implemented. 2 other libraries are also in the project. An about section for PDF.js was added
+    highlighting some of the features of the application. 
+
+    Pages for the other 2 libraries are created with viewers for each. No about section quite yet though for these pages. This will be done
+    in milestone 4. 
+
+    Stylistic reworks of some of the pages as necessary. 
