@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AboutComponent } from '../about/about.component';
 
 import { Editor2Component } from './editor2.component';
 
@@ -8,6 +10,11 @@ describe('Editor2Component', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+       imports: [
+      RouterTestingModule.withRoutes(
+        [{path: 'about', component: AboutComponent}]
+      )
+    ],
       declarations: [ Editor2Component ]
     })
     .compileComponents();
@@ -20,4 +27,13 @@ describe('Editor2Component', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should call the goToPage function', () => {
+    const fixture = TestBed.createComponent(Editor2Component);
+    const app = fixture.debugElement.componentInstance as Editor2Component;
+    fixture.detectChanges();
+    spyOn(app, "goToPage").and.callThrough();
+    app.goToPage("about");
+    expect(app.goToPage).toHaveBeenCalled();
+  })
 });
