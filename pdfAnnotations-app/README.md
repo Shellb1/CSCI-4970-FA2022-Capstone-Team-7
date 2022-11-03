@@ -1,27 +1,37 @@
-# PdfAnnotationsApp
+This is the code repository for team #7 of the University of Nebraska-Omaha's CS Capstone class of Fall 2022. 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
+Our project is creating a client-side PDF annotations application for Buildertrend Inc, an Omaha-based company which
+provides construction management software. This application will take the form of an Angular-based web application served on an 
+Amazon EC2 instance. 
 
-## Development server
+RELEASE NOTES FOR MILESTONE 1:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+    Deployment environment (EC2 server) set up. 
 
-## Code scaffolding
+    Barebones Angular project created and deployed on the instance. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    Routing between various pages has been set up. 
 
-## Build
+    All of the code for this release resides in the main branch. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+RELEASE NOTES FOR MILESTONE 2:
 
-## Running unit tests
+    PDF.js viewer built into application. The viewer has features such as searching, 
+    opening PDF's fully client-side, and more. Annotations are not present yet but will be
+    in a future release. 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    Development started on other pages. 
 
-## Running end-to-end tests
+    Added a banner to the top of the application that is present across all pages. 
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    Other libraries beginning to be explored, but no active development as of now. 
 
-## Further help
+RELEASE NOTES FOR MILESTONE 3:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    PDF.js viewer with annotation features implemented. 2 other libraries are also in the project. An about section for PDF.js was added
+    highlighting some of the features of the application. 
+
+    Pages for the other 2 libraries are created with viewers for each. No about section quite yet though for these pages. This will be done
+    in milestone 4. 
+
+    Stylistic reworks of some of the pages as necessary. 
