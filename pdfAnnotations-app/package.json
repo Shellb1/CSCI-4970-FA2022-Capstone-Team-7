@@ -2,13 +2,14 @@
   "name": "pdf-annotations-app",
   "version": "0.0.0",
   "scripts": {
-    
     "move-static": "cp -a ./node_modules/@pdftron/webviewer/public/. ./dist/public/webviewer",
     "build": "mybuildscript && npm run move-static",
     "ng": "ng",
     "start": "ng serve",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:doc": "./node_modules/.bin/compodoc -p libs/core/tsconfig.lib.json --theme Readthedocs -d dist/apps/documentation/compodoc ",
+    "serve:doc": "./node_modules/.bin/compodoc -p libs/core/tsconfig.lib.json --theme Readthedocs -d dist/apps/documentation/compodoc -s"
   },
   "private": true,
   "dependencies": {
