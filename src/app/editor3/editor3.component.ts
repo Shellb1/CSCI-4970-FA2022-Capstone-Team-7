@@ -34,11 +34,6 @@ export class Editor3Component implements OnInit, AfterViewInit {
       const { documentViewer, Annotations, annotationManager } = instance.Core;
 
       instance.UI.openElements(['notesPanel']);
-
-      documentViewer.addEventListener('annotationsLoaded', () => {
-        console.log('annotations loaded');
-      });
-
       documentViewer.addEventListener('documentLoaded', () => {
         this.documentLoaded$.next();
         const rectangleAnnot = new Annotations.RectangleAnnotation({
@@ -63,7 +58,7 @@ export class Editor3Component implements OnInit, AfterViewInit {
     return this.documentLoaded$.asObservable();
   }
 
-   goToPage(page: String) {
+  goToPage(page: String) {
     this.router.navigateByUrl('/' + page);
   }
 
