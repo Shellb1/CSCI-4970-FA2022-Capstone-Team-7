@@ -1,3 +1,7 @@
+/*
+Component for the PDF.js page. Main functionality here includes the "goToPage" function,
+which allows the page to go back to the previous page. 
+*/
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({

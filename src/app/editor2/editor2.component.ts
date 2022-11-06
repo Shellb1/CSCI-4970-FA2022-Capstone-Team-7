@@ -1,3 +1,7 @@
+/*
+This is the component for the PSPDFKIT library. Main functionality here is 
+the goToPage() functionality, which allows the routing buttons to work. 
+*/
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({

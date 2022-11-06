@@ -1,3 +1,6 @@
+/*
+Test cases for the PDF.js component of the site. 
+*/
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AboutComponent } from '../about/about.component';

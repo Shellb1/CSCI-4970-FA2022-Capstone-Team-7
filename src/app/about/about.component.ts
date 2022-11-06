@@ -1,3 +1,7 @@
+/*
+Component for the about page. Not much logic is happening here besides the goToPage function, 
+which provides the mechanism to go back to the home page. 
+*/
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
