@@ -7,17 +7,36 @@
     <iframe id="pdf-js-viewer" src="https://web-examples.pspdfkit.com/hello?mode=standalone" title="webviewer" frameborder="0" width="700"
       height="600"></iframe>
   </div>
-  <div>
-    <button mat-raised-button color="primary" (click)="goToPage('')">
-      Home
-    </button>
-    <button
-      mat-raised-button
-      color="accent"
-      style="margin-left: 10px"
-      (click)="goToPage('about')"
-    >
-      About
-    </button>
+  <div style="padding-left:750px; padding-right:20px;">
+    <h3 style="text-align:center; font-size: 30px;">PDF.js Library</h3>
+    <p style="font-size:15px;">
+      PSPDF kit is a licensed library used specifically for annotating pdfs. It requires a form of license for full access 
+      and its best feature is its abilty to be implemented in multiple different platforms. It can be implemented through 
+      the web, mobile, servers, desktop app, etc. It also of course supports many multiple languages as well. This means it 
+      naturally works well with most browsers. 
+      <br/>
+      The features that PSPDF kit are the ability to open and edit a PDF. It also has the ability to open and edit image files.
+      The specific tools that the kit can use are, zoom in/zoom out, draw line, draw tool, signature, note, add text, and the ability
+      to save and open pdf files. 
+      <br/>
+      <br/>
+      This free trial version does not have access to saving specific layers of a file and simply lacks layer functionality. The layer 
+      functionality isn't listed anywhere but could be considered a functionality in a paid license version. The ability to incorporate 
+      a layer tool into the library will be considerably hard as most of the actual code is hidden from you for set-up. 
+      <br/>
+      <br/>
+      Ultimately, the library will get the job done fast and efficiently. It might not have all the neccessary tools for a fully complete 
+      pdf annotation tool. But, the website has multiple easy set-up tutorials for various forms of implementation and this pdf library should
+      definitly be considered the easiest to use and the editor that works with the most platforms. The website which consists of more information
+      is here <a href="https://pspdfkit.com/" target="_blank">
+      <br/>
   </div>
+<div style="padding-left:740px; padding-top:48px;">
+  <button mat-raised-button color="accent" style="margin-left: 10px" (click)="goToPage('about')">
+    About
+  </button>
+  <button mat-raised-button color="primary" style="margin-left: 10px" (click)="goToPage('')">
+    Home
+  </button>
+</div>
 </body>
