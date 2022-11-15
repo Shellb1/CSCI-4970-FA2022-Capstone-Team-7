@@ -1,5 +1,30 @@
 <body>
-  <div #viewer class="viewer"></div>
+  <div style="float: left" #viewer class="viewer"></div>
+  <div>
+    <h1 style="text-align: center">PDFTron</h1>
+    PDFTron is a library that allows for the viewing and annotating of various
+    different file formats including PDFs in a completely client-side manner.
+    This library is the most full featured of the libraries that are implemented
+    in this project and includes features such as various viewing features
+    including zoom and pan tools, there are various annotation tools includeing
+    the ability to highlight and interact with the embedded text of the PDF
+    document in various different colors. You have the ability to add comments
+    that are displayed on the sidebar aswell as getting embedded on top of the
+    PDF document, the annotation tools also allow you to draw shapes or free
+    draw on top of the PDF document. There is also the ability to digitally sign
+    and stamp documents aswell as the ability to insert images into the PDF
+    document that are displayed on top of the document.
+    <br />
+    I believe there is a way to have multiple different layers of annotations
+    that was shown in the API but I am currently still trying to get the
+    implementation of that feature to work correctly. I also believe there is an
+    option to save annotations separately as well but the only example I have
+    found is the implementation in React and this web application uses Angular.
+    <br />
+    PDFTron can be deployed on various platforms including android and ios, as a
+    desktop app, deployed to a server and hosted as a web application in various
+    frameworks including React, Angular, Vue, Electron and others.
+  </div>
   <div>
     <button mat-raised-button color="primary" (click)="goToPage('')">
       Home

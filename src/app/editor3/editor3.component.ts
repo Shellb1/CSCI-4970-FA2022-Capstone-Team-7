@@ -24,7 +24,7 @@ export class Editor3Component implements OnInit, AfterViewInit {
 
     WebViewer({
       path: '../../assets/lib',
-      initialDoc: 'https://pdftron.s3.amazonaws.com/downloads/pl/demo-annotated.pdf',
+      initialDoc: '',
       enableFilePicker: true,
     }, this.viewer.nativeElement).then(instance => {
       this.wvInstance = instance;
@@ -32,6 +32,7 @@ export class Editor3Component implements OnInit, AfterViewInit {
       this.coreControlsEvent.emit(instance.UI.LayoutMode.Single);
 
       const { documentViewer, Annotations, annotationManager } = instance.Core;
+      
 
       instance.UI.openElements(['notesPanel']);
       documentViewer.addEventListener('documentLoaded', () => {
