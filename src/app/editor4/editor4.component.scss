@@ -1,0 +1,25 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 125px;
+  }
+  
+  td, th {
+    border: 2px solid #000000;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+  
+  #buttonContainer {
+    padding-top:50px;
+    padding-left:600px;
+  }
+
+  #header {
+    padding-left: 550px;
+  }
