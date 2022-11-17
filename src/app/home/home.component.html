@@ -1,24 +1,34 @@
 <body>
   <div>
     <button
-      mat-raised-button
-      color="primary"
-      style="height: 100px; width: 300px"
-      (click)="goToPage('')"
-    >
-      Home Page
-    </button>
+    mat-raised-button
+    color="accent"
+    style="height: 100px; width: 300px"
+    (click)="goToPage('editor2')"
+  >
+    PSPDFKit
+  </button>
+  <button
+    mat-raised-button
+    color="accent"
+    style="height: 100px; width: 300px"
+    (click)="goToPage('editor')"
+  >
+    PDF.js
+  </button>
+  <button
+    mat-raised-button
+    color="accent"
+    style="height: 100px; width: 300px"
+    (click)="goToPage('editor3')"
+  >
+    PDFTron
+  </button>
+</div>
+<div>
     <button
       mat-raised-button
       color="primary"
-      style="height: 100px; width: 300px"
-      (click)="goToPage('editor')"
-    >
-      PDF.js
-    </button>
-    <button
-      mat-raised-button
-      color="accent"
       style="height: 100px; width: 300px"
       (click)="goToPage('about')"
     >
@@ -26,23 +36,7 @@
     </button>
     <button
       mat-raised-button
-      color="accent"
-      style="height: 100px; width: 300px"
-      (click)="goToPage('editor2')"
-    >
-      PSPDFKit
-    </button>
-    <button
-      mat-raised-button
-      color="accent"
-      style="height: 100px; width: 300px"
-      (click)="goToPage('editor3')"
-    >
-      PDFTron
-    </button>
-    <button
-      mat-raised-button
-      color="accent"
+      color="primary"
       style="height: 100px; width: 300px"
       (click)="goToPage('editor4')"
     >
