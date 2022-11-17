@@ -35,3 +35,13 @@ RELEASE NOTES FOR MILESTONE 3:
     in milestone 4. 
 
     Stylistic reworks of some of the pages as necessary. 
+
+RELEASE NOTES FOR MILESTONE 4:
+
+    Other viewers fully implemented in the application.Info sections about other viewers implemented on the respective pages. 
+    On 2 of the pages, the default PDF was removed so the user can open their own PDF right away. 
+
+    A 4th page was added with a features comparison table. As part of milestone 5, this table will be built out 
+    to include features of the various libaries and summarized info. 
+
+    Stylistic reworks of some of the pages as necessary. 
