@@ -2,15 +2,18 @@ import { Component, ViewChild, OnInit, Output, EventEmitter, ElementRef, AfterVi
 import { Subject } from 'rxjs';
 import WebViewer, { WebViewerInstance } from '@pdftron/webviewer';
 import { Router } from '@angular/router';
- 
+
+/*
+  this is the component file for editor3 that contains the functions and logic required to run PDFTron, as well as the goToPage
+*/
+
 @Component({
   selector: 'app-root',
   templateUrl: './editor3.component.html',
   styleUrls: ['./editor3.component.scss']
 })
 export class Editor3Component implements OnInit, AfterViewInit {
-  @ViewChild('viewer')
-  viewer!: ElementRef;
+  @ViewChild('viewer') viewer!: ElementRef;
   wvInstance!: WebViewerInstance;
   @Output() coreControlsEvent:EventEmitter<string> = new EventEmitter(); 
 
@@ -24,7 +27,7 @@ export class Editor3Component implements OnInit, AfterViewInit {
 
     WebViewer({
       path: '../../assets/lib',
-      initialDoc: '',
+      initialDoc: '../../assets/lib/test.pdf',
       enableFilePicker: true,
     }, this.viewer.nativeElement).then(instance => {
       this.wvInstance = instance;
