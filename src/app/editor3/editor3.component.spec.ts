@@ -1,10 +1,12 @@
-// import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { Component } from "@angular/core";
+import { NgZone } from "@angular/core";
 import { TestBed, waitForAsync } from "@angular/core/testing";
 import { RouterTestingModule } from "@angular/router/testing";
 import { AboutComponent } from "../about/about.component";
 import { Editor3Component } from "./editor3.component";
+
+/*
+  this is the test file for editor3 component that contains all the test files for the PDFTron library implementation
+*/
 
 describe("Editor3Component", () => {
   beforeEach(
@@ -20,7 +22,7 @@ describe("Editor3Component", () => {
     })
   );
 
-  it('should create the app', () => { // 4
+  it('should create the app', () => {
     const fixture = TestBed.createComponent(Editor3Component);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
