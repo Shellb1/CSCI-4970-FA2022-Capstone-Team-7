@@ -205,7 +205,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/editor3/editor3.component.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/editor3/editor3.component.ts:20</a></div>
                             </td>
                         </tr>
 
@@ -262,7 +262,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/editor3/editor3.component.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/editor3/editor3.component.ts:18</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -295,8 +295,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="62"
-                            class="link-to-prism">src/app/editor3/editor3.component.ts:62</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="61"
+                            class="link-to-prism">src/app/editor3/editor3.component.ts:61</a></div>
                 </td>
             </tr>
 
@@ -332,8 +332,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="66"
-                            class="link-to-prism">src/app/editor3/editor3.component.ts:66</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="65"
+                            class="link-to-prism">src/app/editor3/editor3.component.ts:65</a></div>
                 </td>
             </tr>
 
@@ -401,8 +401,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">src/app/editor3/editor3.component.ts:23</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/app/editor3/editor3.component.ts:26</a></div>
                 </td>
             </tr>
 
@@ -438,8 +438,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="59"
-                            class="link-to-prism">src/app/editor3/editor3.component.ts:59</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/editor3/editor3.component.ts:58</a></div>
                 </td>
             </tr>
 
@@ -481,7 +481,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/editor3/editor3.component.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/editor3/editor3.component.ts:20</a></div>
                         </td>
                     </tr>
 
@@ -516,7 +516,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/editor3/editor3.component.ts:13</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/editor3/editor3.component.ts:16</a></div>
                         </td>
                     </tr>
 
@@ -542,7 +542,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/editor3/editor3.component.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/editor3/editor3.component.ts:17</a></div>
                         </td>
                     </tr>
 
@@ -559,15 +559,18 @@
 import { Subject } from &#x27;rxjs&#x27;;
 import WebViewer, { WebViewerInstance } from &#x27;@pdftron/webviewer&#x27;;
 import { Router } from &#x27;@angular/router&#x27;;
- 
+
+/*
+  this is the component file for editor3 that contains the functions and logic required to run PDFTron, as well as the goToPage
+*/
+
 @Component({
   selector: &#x27;app-root&#x27;,
   templateUrl: &#x27;./editor3.component.html&#x27;,
   styleUrls: [&#x27;./editor3.component.scss&#x27;]
 })
 export class Editor3Component implements OnInit, AfterViewInit {
-  @ViewChild(&#x27;viewer&#x27;)
-  viewer!: ElementRef;
+  @ViewChild(&#x27;viewer&#x27;) viewer!: ElementRef;
   wvInstance!: WebViewerInstance;
   @Output() coreControlsEvent:EventEmitter&lt;string&gt; &#x3D; new EventEmitter(); 
 
@@ -581,7 +584,7 @@ export class Editor3Component implements OnInit, AfterViewInit {
 
     WebViewer({
       path: &#x27;../../assets/lib&#x27;,
-      initialDoc: &#x27;https://pdftron.s3.amazonaws.com/downloads/pl/demo-annotated.pdf&#x27;,
+      initialDoc: &#x27;../../assets/lib/test.pdf&#x27;,
       enableFilePicker: true,
     }, this.viewer.nativeElement).then(instance &#x3D;&gt; {
       this.wvInstance &#x3D; instance;
@@ -589,13 +592,9 @@ export class Editor3Component implements OnInit, AfterViewInit {
       this.coreControlsEvent.emit(instance.UI.LayoutMode.Single);
 
       const { documentViewer, Annotations, annotationManager } &#x3D; instance.Core;
+      
 
       instance.UI.openElements([&#x27;notesPanel&#x27;]);
-
-      documentViewer.addEventListener(&#x27;annotationsLoaded&#x27;, () &#x3D;&gt; {
-        console.log(&#x27;annotations loaded&#x27;);
-      });
-
       documentViewer.addEventListener(&#x27;documentLoaded&#x27;, () &#x3D;&gt; {
         this.documentLoaded$.next();
         const rectangleAnnot &#x3D; new Annotations.RectangleAnnotation({
@@ -620,7 +619,7 @@ export class Editor3Component implements OnInit, AfterViewInit {
     return this.documentLoaded$.asObservable();
   }
 
-   goToPage(page: String) {
+  goToPage(page: String) {
     this.router.navigateByUrl(&#x27;/&#x27; + page);
   }
 
@@ -628,8 +627,38 @@ export class Editor3Component implements OnInit, AfterViewInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;body&gt;
-  &lt;div #viewer class&#x3D;&quot;viewer&quot;&gt;&lt;/div&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;!--
+  This is the HTML for the PDFTron library.
+  This Page also consists of the research for the PDFTron library. Useful for comparing the other pdf 
+  libraries in greater detail. 
+--&gt;
+&lt;body&gt;
+  &lt;div style&#x3D;&quot;float: left&quot; #viewer class&#x3D;&quot;viewer&quot;&gt;&lt;/div&gt;
+  &lt;div&gt;
+    &lt;h1 style&#x3D;&quot;text-align: center&quot;&gt;PDFTron&lt;/h1&gt;
+    PDFTron is a library that allows for the viewing and annotating of various
+    different file formats including PDFs in a completely client-side manner.
+    This library is the most full featured of the libraries that are implemented
+    in this project and includes features such as various viewing features
+    including zoom and pan tools, there are various annotation tools includeing
+    the ability to highlight and interact with the embedded text of the PDF
+    document in various different colors. You have the ability to add comments
+    that are displayed on the sidebar aswell as getting embedded on top of the
+    PDF document, the annotation tools also allow you to draw shapes or free
+    draw on top of the PDF document. There is also the ability to digitally sign
+    and stamp documents aswell as the ability to insert images into the PDF
+    document that are displayed on top of the document.
+    &lt;br /&gt;
+    I believe there is a way to have multiple different layers of annotations
+    that was shown in the API but I am currently still trying to get the
+    implementation of that feature to work correctly. I also believe there is an
+    option to save annotations separately as well but the only example I have
+    found is the implementation in React and this web application uses Angular.
+    &lt;br /&gt;
+    PDFTron can be deployed on various platforms including android and ios, as a
+    desktop app, deployed to a server and hosted as a web application in various
+    frameworks including React, Angular, Vue, Electron and others.
+  &lt;/div&gt;
   &lt;div&gt;
     &lt;button mat-raised-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;goToPage(&#x27;&#x27;)&quot;&gt;
       Home
@@ -651,15 +680,18 @@ export class Editor3Component implements OnInit, AfterViewInit {
                 <p class="comment">
                     <code>./editor3.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">app-webviewer {
+                <pre class="line-numbers"><code class="language-scss">/*
+    This is the scss file that is used to style the PDFTron panel on the webpage.
+*/
+app-webviewer {
     flex: 1;
     margin: 8px;
     -webkit-box-shadow: 1px 1px 10px #999;
             box-shadow: 1px 1px 10px #999;
 }
 .viewer {
-    width: 100%;
-    height: 100%;
+    width: 50vw;
+    height: 90vh;
 }</code></pre>
     </div>
 
@@ -688,7 +720,7 @@ export class Editor3Component implements OnInit, AfterViewInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><body>  <div #viewer class="viewer"></div>  <div>    <button mat-raised-button color="primary" (click)="goToPage(\'\')">      Home    </button>    <button      mat-raised-button      color="accent"      style="margin-left: 10px"      (click)="goToPage(\'about\')"    >      About    </button>  </div></body></div>'
+        var COMPONENT_TEMPLATE = '<div><!--  This is the HTML for the PDFTron library.  This Page also consists of the research for the PDFTron library. Useful for comparing the other pdf   libraries in greater detail. --><body>  <div style="float: left" #viewer class="viewer"></div>  <div>    <h1 style="text-align: center">PDFTron</h1>    PDFTron is a library that allows for the viewing and annotating of various    different file formats including PDFs in a completely client-side manner.    This library is the most full featured of the libraries that are implemented    in this project and includes features such as various viewing features    including zoom and pan tools, there are various annotation tools includeing    the ability to highlight and interact with the embedded text of the PDF    document in various different colors. You have the ability to add comments    that are displayed on the sidebar aswell as getting embedded on top of the    PDF document, the annotation tools also allow you to draw shapes or free    draw on top of the PDF document. There is also the ability to digitally sign    and stamp documents aswell as the ability to insert images into the PDF    document that are displayed on top of the document.    <br />    I believe there is a way to have multiple different layers of annotations    that was shown in the API but I am currently still trying to get the    implementation of that feature to work correctly. I also believe there is an    option to save annotations separately as well but the only example I have    found is the implementation in React and this web application uses Angular.    <br />    PDFTron can be deployed on various platforms including android and ios, as a    desktop app, deployed to a server and hosted as a web application in various    frameworks including React, Angular, Vue, Electron and others.  </div>  <div>    <button mat-raised-button color="primary" (click)="goToPage(\'\')">      Home    </button>    <button      mat-raised-button      color="accent"      style="margin-left: 10px"      (click)="goToPage(\'about\')"    >      About    </button>  </div></body></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Editor2Component', 'selector': 'app-editor'},{'name': 'Editor3Component', 'selector': 'app-root'},{'name': 'Editor4Component', 'selector': 'app-editor'},{'name': 'EditorComponent', 'selector': 'app-editor'},{'name': 'HomeComponent', 'selector': 'app-home'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'Editor3Component'};

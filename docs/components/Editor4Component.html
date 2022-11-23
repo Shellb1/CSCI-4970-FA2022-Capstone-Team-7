@@ -344,8 +344,57 @@ export class Editor4Component implements OnInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;body&gt;
-  &lt;p&gt;editor4 works!&lt;/p&gt;
-  &lt;div&gt;
+&lt;h1 id&#x3D;&quot;header&quot;&gt;
+  Feature Comparison
+&lt;/h1&gt;
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Library&lt;/th&gt;
+    &lt;th&gt;Features&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;a href&#x3D;&quot;/editor&quot;&gt;
+        PDF.js 
+      &lt;/a&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          Feature #1
+        &lt;/li&gt;
+        &lt;li&gt;
+          Feature #2
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;a href&#x3D;&quot;/editor2&quot;&gt;PSPDFKit&lt;/a&gt;
+    &lt;/td&gt;
+    &lt;td&gt;&lt;ul&gt;
+      &lt;li&gt;
+        Feature #1
+      &lt;/li&gt;
+      &lt;li&gt;
+        Feature #2
+      &lt;/li&gt;
+    &lt;/ul&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;a href&#x3D;&quot;/editor3&quot;&gt;PDFTron&lt;/a&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Feature #1&lt;/li&gt;
+        &lt;li&gt;Feature #2&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+  &lt;div id&#x3D;&quot;buttonContainer&quot;&gt;
     &lt;button mat-raised-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;goToPage(&#x27;&#x27;)&quot;&gt;
       Home
     &lt;/button&gt;
@@ -366,7 +415,31 @@ export class Editor4Component implements OnInit {
                 <p class="comment">
                     <code>./editor4.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 125px;
+  }
+  
+  td, th {
+    border: 2px solid #000000;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+  
+  #buttonContainer {
+    padding-top:50px;
+    padding-left:600px;
+  }
+
+  #header {
+    padding-left: 550px;
+  }</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -394,7 +467,7 @@ export class Editor4Component implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><body>  <p>editor4 works!</p>  <div>    <button mat-raised-button color="primary" (click)="goToPage(\'\')">      Home    </button>    <button      mat-raised-button      color="accent"      style="margin-left: 10px"      (click)="goToPage(\'about\')"    >      About    </button>  </div></body></div>'
+        var COMPONENT_TEMPLATE = '<div><body><h1 id="header">  Feature Comparison</h1><table>  <tr>    <th>Library</th>    <th>Features</th>  </tr>  <tr>    <td>      <a href="/editor">        PDF.js       </a>    </td>    <td>      <ul>        <li>          Feature #1        </li>        <li>          Feature #2        </li>      </ul>    </td>  </tr>  <tr>    <td><a href="/editor2">PSPDFKit</a>    </td>    <td><ul>      <li>        Feature #1      </li>      <li>        Feature #2      </li>    </ul></td>  </tr>  <tr>    <td>      <a href="/editor3">PDFTron</a>    </td>    <td>      <ul>        <li>Feature #1</li>        <li>Feature #2</li>      </ul>    </td>  </tr></table>  <div id="buttonContainer">    <button mat-raised-button color="primary" (click)="goToPage(\'\')">      Home    </button>    <button      mat-raised-button      color="accent"      style="margin-left: 10px"      (click)="goToPage(\'about\')"    >      About    </button>  </div></body></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Editor2Component', 'selector': 'app-editor'},{'name': 'Editor3Component', 'selector': 'app-root'},{'name': 'Editor4Component', 'selector': 'app-editor'},{'name': 'EditorComponent', 'selector': 'app-editor'},{'name': 'HomeComponent', 'selector': 'app-home'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'Editor4Component'};

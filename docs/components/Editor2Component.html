@@ -163,7 +163,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/editor2/editor2.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/editor2/editor2.component.ts:12</a></div>
                             </td>
                         </tr>
 
@@ -230,8 +230,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="14"
-                            class="link-to-prism">src/app/editor2/editor2.component.ts:14</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="18"
+                            class="link-to-prism">src/app/editor2/editor2.component.ts:18</a></div>
                 </td>
             </tr>
 
@@ -299,8 +299,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/editor2/editor2.component.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="16"
+                            class="link-to-prism">src/app/editor2/editor2.component.ts:16</a></div>
                 </td>
             </tr>
 
@@ -343,24 +343,51 @@ export class Editor2Component implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;body&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;!--
+  This is the HTML for the PSPDFKIT library. This includes a link to the library embedded in the website. 
+  This is because implementing the actual library even after following the tutorial on their website,
+  did not end up working. This can be due to the tutorial for the implementation being outdated or 
+  because a user needs a license. 
+  This Page also consists of the research for the PSPDFKIT library. Useful for comparing the other pdf 
+  libraries in greater detail. 
+--&gt;
+&lt;body&gt;
   &lt;div style&#x3D;&quot;float:left;&quot;&gt;
     &lt;iframe id&#x3D;&quot;pdf-js-viewer&quot; src&#x3D;&quot;https://web-examples.pspdfkit.com/hello?mode&#x3D;standalone&quot; title&#x3D;&quot;webviewer&quot; frameborder&#x3D;&quot;0&quot; width&#x3D;&quot;700&quot;
       height&#x3D;&quot;600&quot;&gt;&lt;/iframe&gt;
   &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button mat-raised-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;goToPage(&#x27;&#x27;)&quot;&gt;
-      Home
-    &lt;/button&gt;
-    &lt;button
-      mat-raised-button
-      color&#x3D;&quot;accent&quot;
-      style&#x3D;&quot;margin-left: 10px&quot;
-      (click)&#x3D;&quot;goToPage(&#x27;about&#x27;)&quot;
-    &gt;
-      About
-    &lt;/button&gt;
+  &lt;div style&#x3D;&quot;padding-left:750px; padding-right:20px;&quot;&gt;
+    &lt;h3 style&#x3D;&quot;text-align:center; font-size: 30px;&quot;&gt;PSPDFKit Library&lt;/h3&gt;
+    &lt;p style&#x3D;&quot;font-size:15px;&quot;&gt;
+      PSPDF kit is a licensed library used specifically for annotating pdfs. It requires a form of license for full access 
+      and its best feature is its abilty to be implemented in multiple different platforms. It can be implemented through 
+      the web, mobile, servers, desktop app, etc. It also of course supports many multiple languages as well. This means it 
+      naturally works well with most browsers. 
+      &lt;br/&gt;
+      The features that PSPDF kit are the ability to open and edit a PDF. It also has the ability to open and edit image files.
+      The specific tools that the kit can use are, zoom in/zoom out, draw line, draw tool, signature, note, add text, and the ability
+      to save and open pdf files. 
+      &lt;br/&gt;
+      &lt;br/&gt;
+      This free trial version does not have access to saving specific layers of a file and simply lacks layer functionality. The layer 
+      functionality isn&#x27;t listed anywhere but could be considered a functionality in a paid license version. The ability to incorporate 
+      a layer tool into the library will be considerably hard as most of the actual code is hidden from you for set-up. 
+      &lt;br/&gt;
+      &lt;br/&gt;
+      Ultimately, the library will get the job done fast and efficiently. It might not have all the neccessary tools for a fully complete 
+      pdf annotation tool. But, the website has multiple easy set-up tutorials for various forms of implementation and this pdf library should
+      definitly be considered the easiest to use and the editor that works with the most platforms. The website which consists of more information
+      is &lt;a href&#x3D;&quot;https://pspdfkit.com/&quot; target&#x3D;&quot;_blank&quot;&gt;here.&lt;/a&gt;
+      &lt;br/&gt;
   &lt;/div&gt;
+&lt;div style&#x3D;&quot;padding-left:740px; padding-top:48px;&quot;&gt;
+  &lt;button mat-raised-button color&#x3D;&quot;accent&quot; style&#x3D;&quot;margin-left: 10px&quot; (click)&#x3D;&quot;goToPage(&#x27;about&#x27;)&quot;&gt;
+    About
+  &lt;/button&gt;
+  &lt;button mat-raised-button color&#x3D;&quot;primary&quot; style&#x3D;&quot;margin-left: 10px&quot; (click)&#x3D;&quot;goToPage(&#x27;&#x27;)&quot;&gt;
+    Home
+  &lt;/button&gt;
+&lt;/div&gt;
 &lt;/body&gt;</code></pre>
     </div>
 
@@ -396,7 +423,7 @@ export class Editor2Component implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><body>  <div style="float:left;">    <iframe id="pdf-js-viewer" src="https://web-examples.pspdfkit.com/hello?mode=standalone" title="webviewer" frameborder="0" width="700"      height="600"></iframe>  </div>  <div>    <button mat-raised-button color="primary" (click)="goToPage(\'\')">      Home    </button>    <button      mat-raised-button      color="accent"      style="margin-left: 10px"      (click)="goToPage(\'about\')"    >      About    </button>  </div></body></div>'
+        var COMPONENT_TEMPLATE = '<div><!--  This is the HTML for the PSPDFKIT library. This includes a link to the library embedded in the website.   This is because implementing the actual library even after following the tutorial on their website,  did not end up working. This can be due to the tutorial for the implementation being outdated or   because a user needs a license.   This Page also consists of the research for the PSPDFKIT library. Useful for comparing the other pdf   libraries in greater detail. --><body>  <div style="float:left;">    <iframe id="pdf-js-viewer" src="https://web-examples.pspdfkit.com/hello?mode=standalone" title="webviewer" frameborder="0" width="700"      height="600"></iframe>  </div>  <div style="padding-left:750px; padding-right:20px;">    <h3 style="text-align:center; font-size: 30px;">PSPDFKit Library</h3>    <p style="font-size:15px;">      PSPDF kit is a licensed library used specifically for annotating pdfs. It requires a form of license for full access       and its best feature is its abilty to be implemented in multiple different platforms. It can be implemented through       the web, mobile, servers, desktop app, etc. It also of course supports many multiple languages as well. This means it       naturally works well with most browsers.       <br/>      The features that PSPDF kit are the ability to open and edit a PDF. It also has the ability to open and edit image files.      The specific tools that the kit can use are, zoom in/zoom out, draw line, draw tool, signature, note, add text, and the ability      to save and open pdf files.       <br/>      <br/>      This free trial version does not have access to saving specific layers of a file and simply lacks layer functionality. The layer       functionality isn\'t listed anywhere but could be considered a functionality in a paid license version. The ability to incorporate       a layer tool into the library will be considerably hard as most of the actual code is hidden from you for set-up.       <br/>      <br/>      Ultimately, the library will get the job done fast and efficiently. It might not have all the neccessary tools for a fully complete       pdf annotation tool. But, the website has multiple easy set-up tutorials for various forms of implementation and this pdf library should      definitly be considered the easiest to use and the editor that works with the most platforms. The website which consists of more information      is <a href="https://pspdfkit.com/" target="_blank">here.</a>      <br/>  </div><div style="padding-left:740px; padding-top:48px;">  <button mat-raised-button color="accent" style="margin-left: 10px" (click)="goToPage(\'about\')">    About  </button>  <button mat-raised-button color="primary" style="margin-left: 10px" (click)="goToPage(\'\')">    Home  </button></div></body></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Editor2Component', 'selector': 'app-editor'},{'name': 'Editor3Component', 'selector': 'app-root'},{'name': 'Editor4Component', 'selector': 'app-editor'},{'name': 'EditorComponent', 'selector': 'app-editor'},{'name': 'HomeComponent', 'selector': 'app-home'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'Editor2Component'};

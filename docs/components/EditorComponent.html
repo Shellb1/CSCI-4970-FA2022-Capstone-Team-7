@@ -163,7 +163,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/editor/editor.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/editor/editor.component.ts:12</a></div>
                             </td>
                         </tr>
 
@@ -230,8 +230,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="14"
-                            class="link-to-prism">src/app/editor/editor.component.ts:14</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="18"
+                            class="link-to-prism">src/app/editor/editor.component.ts:18</a></div>
                 </td>
             </tr>
 
@@ -299,8 +299,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/editor/editor.component.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="16"
+                            class="link-to-prism">src/app/editor/editor.component.ts:16</a></div>
                 </td>
             </tr>
 
@@ -343,9 +343,16 @@ export class EditorComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;body&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;!--
+This is the HTML for the PDF.js page. This includes the viewer itself, which in an iframe on this page
+that references the viewer in /assets/web/viewer.html.
+
+This also includes the documentation on the other part of the page that describes the PDF.js library
+and the features included with it. 
+--&gt;
+&lt;body&gt;
     &lt;div style&#x3D;&quot;float:left;&quot;&gt;
-      &lt;iframe id&#x3D;&quot;pdf-js-viewer&quot; src&#x3D;&quot;../../assets/web/viewer.html&quot; title&#x3D;&quot;webviewer&quot; frameborder&#x3D;&quot;0&quot; width&#x3D;&quot;700&quot;
+      &lt;iframe id&#x3D;&quot;pdf-js-viewer&quot; src&#x3D;&quot;../../assets/web/viewer.html?file&#x3D;&quot; title&#x3D;&quot;webviewer&quot; frameborder&#x3D;&quot;0&quot; width&#x3D;&quot;700&quot;
         height&#x3D;&quot;600&quot;&gt;&lt;/iframe&gt;
     &lt;/div&gt;
     &lt;div style&#x3D;&quot;padding-left:750px; padding-right:20px;&quot;&gt;
@@ -362,15 +369,27 @@ export class EditorComponent implements OnInit {
         have it render PDFs from URLs, however, CORS (cross-origin resource sharing) concerns should be taken into account.  
         &lt;br/&gt;
         &lt;br/&gt;
-        In this version of the viewer, we did not find any mechanism for supporting .XMP files, nor support for images and layers. 
-        That is something that could be possible to implement by extending the viewer, but unfortunately is beyond our capabilities 
-        as developers.
+        In this version of the viewer, we did not find any mechanism for supporting .XMP files, nor support for images and layers without
+        adding on to the viewer. While these features are supported 
+        by the library, and thus it would be possible to implement by extending the viewer, it would be fairly complex to do so. 
         &lt;br/&gt;
         &lt;br/&gt;
         Ultimately, however, the library does a lot of the heavy working with parsing/rendering PDFs, so it is possible to 
         add a lot of features by utilizing the library&#x27;s APIs. That, in fact, is how the webviewer is built: it is not actually part
         of the full library, but rather a demo meant to show what is possible via the library. Another benefit is it is written in 
         pure JavaScript/HTML, and thus can be extended and utilized within any framework/development context. 
+        &lt;br/&gt;
+        &lt;br/&gt;
+        The library comes with much more features that can be utilized outside of those found in the viewer. For example, the library supports
+        dozens of annotation types not currently found in the viewer, such as lines, squares, circles, highlights, underlines, and much
+        more. Basically, any annotation officially supported by the PDF file specification is supported by the library. However, these features
+        would have to be built into the viewer itself to actually render them. 
+        &lt;br/&gt;
+        &lt;br/&gt;
+        Unfortunately, we did not find any way to save the annotations separately from the PDF itself. The library computes and adds the annotations
+        directly to the actual file blob that gets downloaded to the client&#x27;s machine. However, it is theoretically possible to build this feature
+        in outside of the library itself, but it would be complex and require a way to track the annotations outside of the library. 
+  
         &lt;br/&gt;
         &lt;br/&gt;
         Finally, a key benefit of using PDF.js over other editors is it is free and open-source. However, using the viewer we have embedded in our application 
@@ -382,8 +401,8 @@ export class EditorComponent implements OnInit {
     &lt;button mat-raised-button color&#x3D;&quot;accent&quot; style&#x3D;&quot;margin-left: 10px&quot; (click)&#x3D;&quot;goToPage(&#x27;about&#x27;)&quot;&gt;
       About
     &lt;/button&gt;
-    &lt;button mat-raised-button color&#x3D;&quot;primary&quot; style&#x3D;&quot;margin-left: 10px&quot; (click)&#x3D;&quot;goToPage(&#x27;editor&#x27;)&quot;&gt;
-      Editor
+    &lt;button mat-raised-button color&#x3D;&quot;primary&quot; style&#x3D;&quot;margin-left: 10px&quot; (click)&#x3D;&quot;goToPage(&#x27;&#x27;)&quot;&gt;
+      Home
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/body&gt;</code></pre>
@@ -421,7 +440,7 @@ export class EditorComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><body>    <div style="float:left;">      <iframe id="pdf-js-viewer" src="../../assets/web/viewer.html" title="webviewer" frameborder="0" width="700"        height="600"></iframe>    </div>    <div style="padding-left:750px; padding-right:20px;">      <h3 style="text-align:center; font-size: 30px;">PDF.js Library</h3>      <p style="font-size:15px;">        PDF.js is an open-source JavaScript library developed and supported by the Mozilla foundation. It is included standard in Mozilla Firefox,         and there also is an extension for Google Chrome. Thus, the supported browsers         for this particular application are Firefox and Chrome.         <br/>        <br/>        Some of the features that this version of the viewer includes are opening and viewing PDFs fully client-side,         annotating PDFs fully client-side, as well as loading annotations already present. In addition, there is a feature         to add text to the PDF as well. There are also various search and view features. One could also add to the viewer and        have it render PDFs from URLs, however, CORS (cross-origin resource sharing) concerns should be taken into account.          <br/>        <br/>        In this version of the viewer, we did not find any mechanism for supporting .XMP files, nor support for images and layers.         That is something that could be possible to implement by extending the viewer, but unfortunately is beyond our capabilities         as developers.        <br/>        <br/>        Ultimately, however, the library does a lot of the heavy working with parsing/rendering PDFs, so it is possible to         add a lot of features by utilizing the library\'s APIs. That, in fact, is how the webviewer is built: it is not actually part        of the full library, but rather a demo meant to show what is possible via the library. Another benefit is it is written in         pure JavaScript/HTML, and thus can be extended and utilized within any framework/development context.         <br/>        <br/>        Finally, a key benefit of using PDF.js over other editors is it is free and open-source. However, using the viewer we have embedded in our application         would require Buildertrend to build upon it or reskin it in some way in accordance with the licensing on the Github repo,        which is linked <a href="https://github.com/mozilla/pdf.js" target="_blank">here.</a>      </p>    </div>  <div style="padding-left:740px; padding-top:48px;">    <button mat-raised-button color="accent" style="margin-left: 10px" (click)="goToPage(\'about\')">      About    </button>    <button mat-raised-button color="primary" style="margin-left: 10px" (click)="goToPage(\'editor\')">      Editor    </button>  </div></body></div>'
+        var COMPONENT_TEMPLATE = '<div><!--This is the HTML for the PDF.js page. This includes the viewer itself, which in an iframe on this pagethat references the viewer in /assets/web/viewer.html.This also includes the documentation on the other part of the page that describes the PDF.js libraryand the features included with it. --><body>    <div style="float:left;">      <iframe id="pdf-js-viewer" src="../../assets/web/viewer.html?file=" title="webviewer" frameborder="0" width="700"        height="600"></iframe>    </div>    <div style="padding-left:750px; padding-right:20px;">      <h3 style="text-align:center; font-size: 30px;">PDF.js Library</h3>      <p style="font-size:15px;">        PDF.js is an open-source JavaScript library developed and supported by the Mozilla foundation. It is included standard in Mozilla Firefox,         and there also is an extension for Google Chrome. Thus, the supported browsers         for this particular application are Firefox and Chrome.         <br/>        <br/>        Some of the features that this version of the viewer includes are opening and viewing PDFs fully client-side,         annotating PDFs fully client-side, as well as loading annotations already present. In addition, there is a feature         to add text to the PDF as well. There are also various search and view features. One could also add to the viewer and        have it render PDFs from URLs, however, CORS (cross-origin resource sharing) concerns should be taken into account.          <br/>        <br/>        In this version of the viewer, we did not find any mechanism for supporting .XMP files, nor support for images and layers without        adding on to the viewer. While these features are supported         by the library, and thus it would be possible to implement by extending the viewer, it would be fairly complex to do so.         <br/>        <br/>        Ultimately, however, the library does a lot of the heavy working with parsing/rendering PDFs, so it is possible to         add a lot of features by utilizing the library\'s APIs. That, in fact, is how the webviewer is built: it is not actually part        of the full library, but rather a demo meant to show what is possible via the library. Another benefit is it is written in         pure JavaScript/HTML, and thus can be extended and utilized within any framework/development context.         <br/>        <br/>        The library comes with much more features that can be utilized outside of those found in the viewer. For example, the library supports        dozens of annotation types not currently found in the viewer, such as lines, squares, circles, highlights, underlines, and much        more. Basically, any annotation officially supported by the PDF file specification is supported by the library. However, these features        would have to be built into the viewer itself to actually render them.         <br/>        <br/>        Unfortunately, we did not find any way to save the annotations separately from the PDF itself. The library computes and adds the annotations        directly to the actual file blob that gets downloaded to the client\'s machine. However, it is theoretically possible to build this feature        in outside of the library itself, but it would be complex and require a way to track the annotations outside of the library.           <br/>        <br/>        Finally, a key benefit of using PDF.js over other editors is it is free and open-source. However, using the viewer we have embedded in our application         would require Buildertrend to build upon it or reskin it in some way in accordance with the licensing on the Github repo,        which is linked <a href="https://github.com/mozilla/pdf.js" target="_blank">here.</a>      </p>    </div>  <div style="padding-left:740px; padding-top:48px;">    <button mat-raised-button color="accent" style="margin-left: 10px" (click)="goToPage(\'about\')">      About    </button>    <button mat-raised-button color="primary" style="margin-left: 10px" (click)="goToPage(\'\')">      Home    </button>  </div></body></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Editor2Component', 'selector': 'app-editor'},{'name': 'Editor3Component', 'selector': 'app-root'},{'name': 'Editor4Component', 'selector': 'app-editor'},{'name': 'EditorComponent', 'selector': 'app-editor'},{'name': 'HomeComponent', 'selector': 'app-home'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'EditorComponent'};

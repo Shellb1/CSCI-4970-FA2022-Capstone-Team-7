@@ -348,24 +348,34 @@ export class HomeComponent implements OnInit {
         <pre class="line-numbers"><code class="language-html">&lt;body&gt;
   &lt;div&gt;
     &lt;button
-      mat-raised-button
-      color&#x3D;&quot;primary&quot;
-      style&#x3D;&quot;height: 100px; width: 300px&quot;
-      (click)&#x3D;&quot;goToPage(&#x27;&#x27;)&quot;
-    &gt;
-      Home Page
-    &lt;/button&gt;
+    mat-raised-button
+    color&#x3D;&quot;accent&quot;
+    style&#x3D;&quot;height: 100px; width: 300px&quot;
+    (click)&#x3D;&quot;goToPage(&#x27;editor2&#x27;)&quot;
+  &gt;
+    PSPDFKit
+  &lt;/button&gt;
+  &lt;button
+    mat-raised-button
+    color&#x3D;&quot;accent&quot;
+    style&#x3D;&quot;height: 100px; width: 300px&quot;
+    (click)&#x3D;&quot;goToPage(&#x27;editor&#x27;)&quot;
+  &gt;
+    PDF.js
+  &lt;/button&gt;
+  &lt;button
+    mat-raised-button
+    color&#x3D;&quot;accent&quot;
+    style&#x3D;&quot;height: 100px; width: 300px&quot;
+    (click)&#x3D;&quot;goToPage(&#x27;editor3&#x27;)&quot;
+  &gt;
+    PDFTron
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;div&gt;
     &lt;button
       mat-raised-button
       color&#x3D;&quot;primary&quot;
-      style&#x3D;&quot;height: 100px; width: 300px&quot;
-      (click)&#x3D;&quot;goToPage(&#x27;editor&#x27;)&quot;
-    &gt;
-      Open Existing PDF
-    &lt;/button&gt;
-    &lt;button
-      mat-raised-button
-      color&#x3D;&quot;accent&quot;
       style&#x3D;&quot;height: 100px; width: 300px&quot;
       (click)&#x3D;&quot;goToPage(&#x27;about&#x27;)&quot;
     &gt;
@@ -373,27 +383,11 @@ export class HomeComponent implements OnInit {
     &lt;/button&gt;
     &lt;button
       mat-raised-button
-      color&#x3D;&quot;accent&quot;
-      style&#x3D;&quot;height: 100px; width: 300px&quot;
-      (click)&#x3D;&quot;goToPage(&#x27;editor2&#x27;)&quot;
-    &gt;
-      Editor2
-    &lt;/button&gt;
-    &lt;button
-      mat-raised-button
-      color&#x3D;&quot;accent&quot;
-      style&#x3D;&quot;height: 100px; width: 300px&quot;
-      (click)&#x3D;&quot;goToPage(&#x27;editor3&#x27;)&quot;
-    &gt;
-      Editor3
-    &lt;/button&gt;
-    &lt;button
-      mat-raised-button
-      color&#x3D;&quot;accent&quot;
+      color&#x3D;&quot;primary&quot;
       style&#x3D;&quot;height: 100px; width: 300px&quot;
       (click)&#x3D;&quot;goToPage(&#x27;editor4&#x27;)&quot;
     &gt;
-      Editor4
+      Features Comparison
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/body&gt;
@@ -409,7 +403,7 @@ export class HomeComponent implements OnInit {
     margin: 40px;
 }
 button {
-    margin: 10px;
+    margin: 30px;
 }
 </code></pre>
     </div>
@@ -439,7 +433,7 @@ button {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><body>  <div>    <button      mat-raised-button      color="primary"      style="height: 100px; width: 300px"      (click)="goToPage(\'\')"    >      Home Page    </button>    <button      mat-raised-button      color="primary"      style="height: 100px; width: 300px"      (click)="goToPage(\'editor\')"    >      Open Existing PDF    </button>    <button      mat-raised-button      color="accent"      style="height: 100px; width: 300px"      (click)="goToPage(\'about\')"    >      About    </button>    <button      mat-raised-button      color="accent"      style="height: 100px; width: 300px"      (click)="goToPage(\'editor2\')"    >      Editor2    </button>    <button      mat-raised-button      color="accent"      style="height: 100px; width: 300px"      (click)="goToPage(\'editor3\')"    >      Editor3    </button>    <button      mat-raised-button      color="accent"      style="height: 100px; width: 300px"      (click)="goToPage(\'editor4\')"    >      Editor4    </button>  </div></body></div>'
+        var COMPONENT_TEMPLATE = '<div><body>  <div>    <button    mat-raised-button    color="accent"    style="height: 100px; width: 300px"    (click)="goToPage(\'editor2\')"  >    PSPDFKit  </button>  <button    mat-raised-button    color="accent"    style="height: 100px; width: 300px"    (click)="goToPage(\'editor\')"  >    PDF.js  </button>  <button    mat-raised-button    color="accent"    style="height: 100px; width: 300px"    (click)="goToPage(\'editor3\')"  >    PDFTron  </button></div><div>    <button      mat-raised-button      color="primary"      style="height: 100px; width: 300px"      (click)="goToPage(\'about\')"    >      About    </button>    <button      mat-raised-button      color="primary"      style="height: 100px; width: 300px"      (click)="goToPage(\'editor4\')"    >      Features Comparison    </button>  </div></body></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Editor2Component', 'selector': 'app-editor'},{'name': 'Editor3Component', 'selector': 'app-root'},{'name': 'Editor4Component', 'selector': 'app-editor'},{'name': 'EditorComponent', 'selector': 'app-editor'},{'name': 'HomeComponent', 'selector': 'app-home'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HomeComponent'};
