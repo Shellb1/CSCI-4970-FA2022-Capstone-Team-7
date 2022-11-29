@@ -163,7 +163,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/about/about.component.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/about/about.component.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -230,8 +230,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="16"
-                            class="link-to-prism">src/app/about/about.component.ts:16</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="20"
+                            class="link-to-prism">src/app/about/about.component.ts:20</a></div>
                 </td>
             </tr>
 
@@ -299,8 +299,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="13"
-                            class="link-to-prism">src/app/about/about.component.ts:13</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="17"
+                            class="link-to-prism">src/app/about/about.component.ts:17</a></div>
                 </td>
             </tr>
 
@@ -346,7 +346,12 @@ export class AboutComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;body&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;!--
+This is the about page for our web application. This will describe the features we have implemented
+and provide a mechanism to go back to the home page. Think of this page as a form of &quot;intro&quot; page for 
+the overall project. 
+--&gt;
+&lt;body&gt;
   &lt;div&gt;
     &lt;body&gt;
       &lt;button mat-raised-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;goToPage(&#x27;&#x27;)&quot;&gt;
@@ -361,8 +366,9 @@ export class AboutComponent implements OnInit {
     This project was built by Andrew Shellberg, Colin Brammeier, Brody
     Himmelberg, and Chris Kiihne. &lt;br /&gt;
     &lt;span id&#x3D;&quot;bold&quot;&gt;Features&lt;/span&gt;&lt;br /&gt;
-    Opening a PDF using PDF.js&lt;br /&gt;
-    Editing a PDF using PDF.js&lt;br /&gt;
+    Opening and Editing a PDF using PDF.js&lt;br /&gt;
+    Opening and Editing a PDF using PSPDF Kit&lt;br /&gt;
+    Opening and Editing a PDF using PDFTron&lt;br /&gt;
   &lt;/p&gt;
 &lt;/body&gt;
 </code></pre>
@@ -372,7 +378,10 @@ export class AboutComponent implements OnInit {
                 <p class="comment">
                     <code>./about.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">.bold {
+                <pre class="line-numbers"><code class="language-scss">/*
+CSS styling for the about page. 
+*/
+.bold {
     font-weight: bold;
 }
 body {
@@ -415,7 +424,7 @@ body {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><body>  <div>    <body>      <button mat-raised-button color="primary" (click)="goToPage(\'\')">        Go Back      </button>    </body>  </div>  <p>    This is a project implementing client-side PDF annotations for Buildertrend    Inc. This project is a part of the CSCI 4970 <br />Capstone Project for    Computer Science students at the University of Nebraska-Omaha.<br />    This project was built by Andrew Shellberg, Colin Brammeier, Brody    Himmelberg, and Chris Kiihne. <br />    <span id="bold">Features</span><br />    Opening a PDF using PDF.js<br />    Editing a PDF using PDF.js<br />  </p></body></div>'
+        var COMPONENT_TEMPLATE = '<div><!--This is the about page for our web application. This will describe the features we have implementedand provide a mechanism to go back to the home page. Think of this page as a form of "intro" page for the overall project. --><body>  <div>    <body>      <button mat-raised-button color="primary" (click)="goToPage(\'\')">        Go Back      </button>    </body>  </div>  <p>    This is a project implementing client-side PDF annotations for Buildertrend    Inc. This project is a part of the CSCI 4970 <br />Capstone Project for    Computer Science students at the University of Nebraska-Omaha.<br />    This project was built by Andrew Shellberg, Colin Brammeier, Brody    Himmelberg, and Chris Kiihne. <br />    <span id="bold">Features</span><br />    Opening and Editing a PDF using PDF.js<br />    Opening and Editing a PDF using PSPDF Kit<br />    Opening and Editing a PDF using PDFTron<br />  </p></body></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Editor2Component', 'selector': 'app-editor'},{'name': 'Editor3Component', 'selector': 'app-root'},{'name': 'Editor4Component', 'selector': 'app-editor'},{'name': 'EditorComponent', 'selector': 'app-editor'},{'name': 'HomeComponent', 'selector': 'app-home'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AboutComponent'};

@@ -15,6 +15,11 @@ export class EditorComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  /**
+   * Navigates to the page specified by page. 
+   * @param page the route, in string form, to navigate to. Please see the app-routing.module.ts for a list of 
+   * all routes.
+   */
   goToPage(page: String) {
     this.router.navigateByUrl('/' + page);
   }

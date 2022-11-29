@@ -1,3 +1,7 @@
+/*
+All routes in the application. These will link to various components in the application. 
+the 'path' value specifies the part in the URL that the component links to. 
+*/
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
