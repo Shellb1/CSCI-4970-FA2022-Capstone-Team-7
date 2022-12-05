@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { DoBootstrap, Injector, NgModule } from '@angular/core';
+import { createCustomElement } from '@angular/elements'
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -33,6 +34,16 @@ import { Editor2Component } from './editor2/editor2.component'
     MatButtonModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    AppComponent
+  ]
 })
-export class AppModule { }
+export class AppModule implements DoBootstrap {
+  constructor(private injector: Injector) {
+    const webComponent = createCustomElement(AppComponent, { injector: this.injector });
+    customElements.define('angular-component', webComponent);
+  }
+
+  ngDoBootstrap() { }
+}
