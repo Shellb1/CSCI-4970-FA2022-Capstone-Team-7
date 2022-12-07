@@ -4,6 +4,15 @@ Our project is creating a client-side PDF annotations application for Buildertre
 provides construction management software. This application will take the form of an Angular-based web application served on an 
 Amazon EC2 instance. 
 
+To run this locally, *node* version 16+ and *npm* version 8+ are required. To start, run *npm install* in the root
+directory of the project to install all necessary dependencies. Then, run *ng serve* to start the application locally. 
+
+Deploys to the EC2 server are done manually by the team, and any future deploys to different infrastructure
+will have to be done manually. 
+
+To run the test cases, please run *ng test* in the root directory. This will direct Karma to run all of the 
+automated tests within the .spec.ts files in the project. 
+
 RELEASE NOTES FOR MILESTONE 1:
 
     Deployment environment (EC2 server) set up. 
