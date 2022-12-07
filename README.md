@@ -47,6 +47,7 @@ RELEASE NOTES FOR MILESTONE 4:
     Stylistic reworks of some of the pages as necessary. 
 
 RELEASE NOTES FOR MILESTONE 5:
+
     Comparison table finished with key comparisons made in the table. Updated the overall styling to reflect Buildertrend's color 
     scheme. Also updated the styling of the table to make it centered. 
     
