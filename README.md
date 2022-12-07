@@ -47,9 +47,8 @@ RELEASE NOTES FOR MILESTONE 4:
     Stylistic reworks of some of the pages as necessary. 
 
 RELEASE NOTES FOR MILESTONE 5:
-
     Comparison table finished with key comparisons made in the table. Updated the overall styling to reflect Buildertrend's color 
     scheme. Also updated the styling of the table to make it centered. 
-
+    
     We also attempted to port the application to React, but unfortunately this did not work. The work documented
     for this change can be found at https://github.com/Shellb1/CSCI-4970-FA2022-Capstone-Team-7/tree/attempted-react-migration. 
